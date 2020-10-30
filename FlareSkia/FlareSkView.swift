@@ -123,7 +123,7 @@ public class FlareSkView: UIView {
             _skiaCanvas = sk_surface_get_canvas(_skiaSurface)
         }
         _skBackgroundPaint = sk_paint_new()
-        sk_paint_set_color(_skBackgroundPaint, sk_color_set_argb(255, 93, 93, 93))
+        sk_paint_set_color(_skBackgroundPaint, sk_color_set_argb(0, 0, 0, 0))
     }
     
     func updateBounds(with nodeName: String? = nil) {
