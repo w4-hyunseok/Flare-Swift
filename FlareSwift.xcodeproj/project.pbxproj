@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0BBA0F57223BCD7700B93465 /* FlareCGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA0F56223BCD7700B93465 /* FlareCGView.swift */; };
+		97876F44254B0D77003F1B10 /* libskia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97876F41254B0D70003F1B10 /* libskia.a */; };
+		97876F45254B0D7A003F1B10 /* libskia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97876F43254B0D70003F1B10 /* libskia.a */; };
 		E41D08AE222E8E6600AC8687 /* flare_cg_gradient_radial_stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41D08AD222E8E6600AC8687 /* flare_cg_gradient_radial_stroke.swift */; };
 		E434518F236F84A3009711AA /* flare_sk_shape_with_transformed_stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = E434518E236F84A3009711AA /* flare_sk_shape_with_transformed_stroke.swift */; };
 		E44D5369225F42BC00CBD24A /* flare_sk_actor_paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44D5359225F42BA00CBD24A /* flare_sk_actor_paths.swift */; };
@@ -325,6 +327,8 @@
 
 /* Begin PBXFileReference section */
 		0BBA0F56223BCD7700B93465 /* FlareCGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlareCGView.swift; sourceTree = "<group>"; };
+		97876F41254B0D70003F1B10 /* libskia.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libskia.a; sourceTree = "<group>"; };
+		97876F43254B0D70003F1B10 /* libskia.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libskia.a; sourceTree = "<group>"; };
 		E41D08AD222E8E6600AC8687 /* flare_cg_gradient_radial_stroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flare_cg_gradient_radial_stroke.swift; sourceTree = "<group>"; };
 		E434518E236F84A3009711AA /* flare_sk_shape_with_transformed_stroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flare_sk_shape_with_transformed_stroke.swift; sourceTree = "<group>"; };
 		E44D5359225F42BA00CBD24A /* flare_sk_actor_paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flare_sk_actor_paths.swift; sourceTree = "<group>"; };
@@ -482,6 +486,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97876F45254B0D7A003F1B10 /* libskia.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +502,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97876F44254B0D77003F1B10 /* libskia.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +525,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		97876F3F254B0D70003F1B10 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				97876F40254B0D70003F1B10 /* simulator */,
+				97876F42254B0D70003F1B10 /* device */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		97876F40254B0D70003F1B10 /* simulator */ = {
+			isa = PBXGroup;
+			children = (
+				97876F41254B0D70003F1B10 /* libskia.a */,
+			);
+			path = simulator;
+			sourceTree = "<group>";
+		};
+		97876F42254B0D70003F1B10 /* device */ = {
+			isa = PBXGroup;
+			children = (
+				97876F43254B0D70003F1B10 /* libskia.a */,
+			);
+			path = device;
+			sourceTree = "<group>";
+		};
 		E43AEC74226776E400E71EA8 /* Drawables */ = {
 			isa = PBXGroup;
 			children = (
@@ -555,6 +586,7 @@
 		E453590222282EC900981BD7 = {
 			isa = PBXGroup;
 			children = (
+				97876F3F254B0D70003F1B10 /* Libraries */,
 				E453591022282EC900981BD7 /* Info.plist */,
 				E488330C2252464B000940FB /* FlareSkia */,
 				E46CDCA9223116C6002C40A1 /* Bezier */,
@@ -1580,7 +1612,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/FlareSkia/Skia/src/build_device",
+					"$(PROJECT_DIR)/Libraries/device",
 				);
 				MTL_PREPROCESSOR_DEFINITIONS = "";
 				OTHER_LDFLAGS = (
@@ -1620,7 +1652,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/FlareSkia/Skia/src/build_device",
+					"$(PROJECT_DIR)/Libraries/device",
 				);
 				MTL_PREPROCESSOR_DEFINITIONS = "";
 				OTHER_LDFLAGS = (
@@ -1699,7 +1731,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/FlareSkia/Skia/src/build_simulator",
+					"$(PROJECT_DIR)/Libraries/simulator",
 				);
 				MTL_PREPROCESSOR_DEFINITIONS = "";
 				OTHER_LDFLAGS = (
@@ -1739,7 +1771,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/FlareSkia/Skia/src/build_simulator",
+					"$(PROJECT_DIR)/Libraries/simulator",
 				);
 				MTL_PREPROCESSOR_DEFINITIONS = "";
 				OTHER_LDFLAGS = (

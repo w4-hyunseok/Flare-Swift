@@ -1,4 +1,4 @@
-module Skia [system] {
+module Skia {
   header "Skia.h"
   link "skia"
   export *
